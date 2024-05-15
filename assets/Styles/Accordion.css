@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /*margin-top: 12em;*/
+    margin-top: 0.4em;
+    font-family: "Poppins", sans-serif;
+}
+
+details {
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    background: #f6faff;
+    border-radius: 0.5rem;
+    position: relative;
+    max-width: 600px;
+    border: 1px solid #c3deff;
+    transition: all 0.3s ease-in-out;
+}
+
+details:hover {
+    border: 1px solid #a4a1ff;
+}
+
+summary {
+    user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+    align-items: center;
+}
+
+summary:hover .faq-title {
+    opacity: 1;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:focus {
+    outline: none;
+}
+
+summary:hover .expand-icon {
+    opacity: 1;
+}
+
+.faq-title {
+    color: #1c2035;
+    width: 90%;
+    opacity: 0.65;
+    transition: all 250ms ease-in-out;
+}
+
+.faq-content {
+    color: #303651;
+    padding: 0.2rem 1rem 1rem 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.expand-icon {
+    opacity: 0.65;
+}
+
+.expand-icon {
+    pointer-events: none;
+    position: absolute;
+    right: 1rem;
+    transition: all 150ms ease-out;
+}
